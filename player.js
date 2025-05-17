@@ -18,6 +18,9 @@ export class Player{
         this.image = document.getElementById('player');
         this.speed = 0;
         this.maxSpeed = 2;
+        this.energy = 100;
+        this.maxEnergy = 100;
+        this.energyGen = 5;
         this.states = [new Sitting(this.game), 
                        new Running(this.game),
                        new Jumping(this.game),
@@ -31,6 +34,15 @@ export class Player{
         this.checkCollision();
         this.currentState.handleInput(input);
 
+        //Energy Generation
+        {
+            // Energy recharge logic
+            if (this.energy < this.maxEnergy) {
+                this.energy += this.energyRegen;
+                if (this.energy > this.maxEnergy) this.energy = this.maxEnergy;
+            }
+
+        }
         //Vertical movement
         {
             this.y += this.vy;

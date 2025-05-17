@@ -1,3 +1,5 @@
+@import "tailwindcss";
+@plugin "daisyui";
 *{
     margin: 0;
     padding: 0;
@@ -18,3 +20,24 @@
 #fire, #collisionAnimation{
     display: none;
 }
+ .card {
+    /* Preserve the 3D space so rotateX works properly */
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+    /* Optional: perspective to enhance the 3D depth */
+    perspective: 800px;
+  }
+
+  .card:hover {
+    /* Rotate along the X axis: negative angle makes top go back, bottom forward */
+    transform: rotateY(-20deg) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  }
+
+  #start{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    background-color: red;
+  }

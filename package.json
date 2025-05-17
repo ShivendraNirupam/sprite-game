@@ -1,0 +1,31 @@
+{
+  "name": "game",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./styles.css -o ./dist/output.css --watch"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShivendraNirupam/sprite-game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShivendraNirupam/sprite-game/issues"
+  },
+  "homepage": "https://github.com/ShivendraNirupam/sprite-game#readme",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "daisyui": "^5.0.35",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.7"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.7",
+    "@tailwindcss/postcss": "^4.1.7"
+  }
+}
